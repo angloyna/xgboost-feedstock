@@ -22,6 +22,6 @@ cmake \
     -DCUDA_rt_LIBRARY=${LIBRT} \
     -DCUDA_USE_STATIC_CUDA_RUNTIME=ON \
     -DUSE_NCCL=ON \
-    -DNCCL_ROOT=/usr \
+    -DNCCL_ROOT=/usr/local/cuda \
     ..
 make -j${CPU_COUNT} ${VERBOSE_CM}
