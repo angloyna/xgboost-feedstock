@@ -17,7 +17,7 @@ LIBRT=$(find ${BUILD_PREFIX} -name "librt.so")
 cmake \
     -DCMAKE_INSTALL_PREFIX=${PREFIX} \
     -DUSE_CUDA=ON \
-    -DCUDA_PATH=${PREFIX} \
+    -DCUDA_TOOLKIT_ROOT_DIR=${PREFIX} \
     -DCUDA_rt_LIBRARY=${LIBRT} \
     -DUSE_NCCL=ON \
     -DNCCL_ROOT=/usr/local/cuda \
