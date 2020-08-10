@@ -20,6 +20,8 @@ cmake \
     -DCMAKE_INSTALL_PREFIX=${PREFIX} \
     -DUSE_CUDA=ON \
     -DCUDA_rt_LIBRARY=${LIBRT} \
+    -DCUDA_TOOLKIT_ROOT_DIR=${PREFIX} \
+    -DCUDA_INCLUDE_DIRS=${PREFIX}/include
     -DUSE_NCCL=ON \
     -DNCCL_ROOT=/usr \
     ..
