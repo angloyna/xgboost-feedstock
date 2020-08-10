@@ -19,7 +19,7 @@ LIBRT=$(find ${BUILD_PREFIX} -name "librt.so")
 cmake \
     -DCMAKE_INSTALL_PREFIX=${PREFIX} \
     -DUSE_CUDA=ON \
-    -DCUDA_TOOLKIT_ROOT_DIR=${PREFIX} \
+    -DCUDA_TOOLKIT_ROOT_DIR=${BUILD_PREFIX} \
     -DCUDA_INCLUDE_DIRS=${BUILD_PREFIX}/x86_64-conda_cos6-linux-gnu/include \
     -DCUDA_rt_LIBRARY=${LIBRT} \
     -DUSE_NCCL=ON \
