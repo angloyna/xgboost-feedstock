@@ -26,8 +26,14 @@ requirements:
     - cmake
     - git
     - make  # [linux]
+  run:
+    - python
+    - numpy
+    - scipy
+    - scikit-learn
 
 test:
   requires:
     - pandas
-  script: test-py-xgboost.py
+  commands:
+    - {{ PYTHON }} ./test-py-xgboost.py
