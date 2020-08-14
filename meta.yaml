@@ -27,6 +27,9 @@ build:
   number: 4
 
 requirements:
+  host:
+    - python
+    - pip
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
@@ -34,7 +37,6 @@ requirements:
     - git
     - make  # [linux]
     - pip
-    - python
 test:
   requires:
     - pandas
