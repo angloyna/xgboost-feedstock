@@ -33,6 +33,8 @@ requirements:
     - cmake
     - git
     - make  # [linux]
+    - pip
+    - python
   host:
     - cudatoolkit {{ cudatoolkit }}*
 
