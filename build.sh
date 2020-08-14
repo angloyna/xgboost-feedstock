@@ -11,8 +11,7 @@ if [ ${cudatoolkit} == "8.0" ]; then
     # is not valid for C which causes an issue when -Werror included
     CXXFLAGS="${CXXFLAGS//-fvisibility-inlines-hidden/}"
 fi
-echo $BUILD_PREFIX
-echo "that was build prefix"
+
 CXXFLAGS="-std=c++11"
 LDFLAGS=${LDFLAGS}" -L/usr/local/cuda/lib64"
 LIBRT=$(find ${BUILD_PREFIX} -name "librt.so")
@@ -20,7 +19,7 @@ cmake \
     -DCMAKE_INSTALL_PREFIX=${PREFIX} \
     -DUSE_CUDA=ON \
     -DCUDA_rt_LIBRARY=${LIBRT} \
-    -DCUDA_USE_STATIC_CUDA_RUNTIME=ON \
+    -DCUDA_BIN_PATH=${PREFIX} \
     -DUSE_NCCL=ON \
     -DNCCL_ROOT=/usr/local/cuda \
     ..
