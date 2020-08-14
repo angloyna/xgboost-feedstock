@@ -37,4 +37,4 @@ test:
     - pandas
     - python
   commands:
-    - {{ PYTHON }} ./test-py-xgboost.py
+    - python ./test-py-xgboost.py
