@@ -35,5 +35,6 @@ requirements:
 test:
   requires:
     - pandas
+    - python
   commands:
     - {{ PYTHON }} ./test-py-xgboost.py
