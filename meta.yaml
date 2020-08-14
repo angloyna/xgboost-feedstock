@@ -33,6 +33,8 @@ requirements:
     - scikit-learn
 
 test:
+  source_files:
+    - .
   requires:
     - pandas
     - python
