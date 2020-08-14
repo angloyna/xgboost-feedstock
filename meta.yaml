@@ -39,4 +39,4 @@ test:
     - pandas
     - python
   commands:
-    - python ./test-py-xgboost.py
+    - python ./run_test.py
