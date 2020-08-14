@@ -19,7 +19,7 @@ cmake \
     -DCMAKE_INSTALL_PREFIX=${PREFIX} \
     -DUSE_CUDA=ON \
     -DCUDA_rt_LIBRARY=${LIBRT} \
-    -DCUDA_BIN_PATH=${PREFIX} \
+    -DCUDA_TOOLKIT_ROOT_DIR=${PREFIX} \
     -DUSE_NCCL=ON \
     -DNCCL_ROOT=/usr/local/cuda \
     ..
